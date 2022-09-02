@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: sans-serif,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 50px;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 200;
+    margin-top: 0;
+}
+
+h3 {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 32px;
+}
+
+
+h4 {
+    color: #505050;
+    font-weight: 18px;
+    line-height: 28px;
+}
+
+p {
+    color: #757575;
+    font-size: 16x;
+    font-weight: 300;
+    line-height: 29px;
+    letter-spacing: 0.5px;
+}
+
+
+/*Menu*******************************************************************************/
+.navbar .navbar-brand{
+    font-size: 25px;
+    font-weight: normal;
+    color: #ffffff;
+
+}
+
+.navbar .navbar-nav .nav-link{
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    padding: 0;
+    text-transform: uppercase;
+    transition: all ease-in 0.4s;
+    color: #ffffff;
+}
+
+.navbar .navbar-nav .nav-link:hover{
+    background: transparent;
+    color: #ffffff;
+
+}
+
+
+.navbar .navbar-nav .nav-link::after{
+    content:"";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: transparent;
+    transform: width 0.3s ease, background-color 0.3s ease;
+
+}
+
+.navbar .navbar-nav .nav-link:hover::after{
+    width: 100%;
+    background: #fff;
+    color: #fff;
+}
+
+/*Menu*******************************************************************************/
+
+/*Home******************************************************************************/
+#home{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+
+}
+
+#home video{
+    position: fixed;
+    top:50%;
+    left:50%;
+    min-height: 100%;
+    min-width: 100%;
+    height: auto;
+    width: auto;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    object-fit: cover;
+    box-sizing: border-box;
+    overflow: hidden;
+    z-index: -100;
+    transition: 1s opacity;
+}
+
+#home .overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+}
+
+#home h1{
+    color: #fff;
+    font-size: 7vw;
+    line-height: 1.2em;
+}
+
+#home p{
+    color: rgba(250,250,250,0.7);
+
+}
+
+
+#home .home-text{
+    z-index: 99;
+}
+
+/*Home******************************************************************************/
+
+/*Button****************************************************************************/
+.section-btn{
+    margin: 32px 0 0 0;
+    padding: 0;
+}
+
+.section-btn a{
+    color: #fff;
+    font-weight: normal;
+    line-height: 45px;
+    perspective: 1000px;
+}
+
+
+.section-btn a span{
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    padding: 2px 27px;
+    background: #4dc47d;
+    border-radius: 1px;
+    transition: transform 0.3s;
+    transform-origin: 50% 0;
+    transform-style: preserve-3d;
+}
+
+.section-btn a span::before{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    background: #000;
+    border-radius: 1px;
+    padding: 2px 27px;
+    transition: background 0.3s;
+    transform: rotateX(-90deg);
+    content: attr(data-hover);
+    transform-origin: 50% 0;
+
+}
+
+.section-btn  a:hover span,
+.section-btn a:focus span{
+    transform: rotateX(90deg) translateY(-22px);
+}
+ 
+
+/*Button****************************************************************************/
